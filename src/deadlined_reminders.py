@@ -31,7 +31,7 @@ class DeadlinedReminder(Iterable, ABC):
 
 class DateReminder(DeadlinedReminder):
     def __init__(self, text, date):
-        self.date = parse(date, dayFirst=True)
+        self.date = parse(date, dayfirst=True)
         self.text = text
 
     def __iter__(self):
